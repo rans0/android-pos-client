@@ -28,7 +28,6 @@
             android:layout_height="wrap_content"
             android:hint="Lihat Menu"
             android:textColorHint="@color/white"
-
             android:textSize="18sp"/>
         <Button
             android:id="@+id/btnCheckout"
