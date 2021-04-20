@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void openMenu() {
-        Intent intent = new Intent(this, MenuActivity.class);
+        Intent intent = new Intent(this, DaftarMenuActivity.class);
         startActivity(intent);
     }
 
