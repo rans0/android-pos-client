@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Posclien">
-        <activity android:name=".CheckoutActivity"></activity>
+        <activity android:name=".DaftarMenuActivity"></activity>
+        <activity android:name=".CheckoutActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
