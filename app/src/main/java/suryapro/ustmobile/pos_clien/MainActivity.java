@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btnLihatMenu, btnCheckout;
+    private Button btnLihatMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnLihatMenu = findViewById(R.id.btnLihatMenu);
-        btnCheckout = findViewById(R.id.btnCheckout);
+
 
         btnLihatMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,20 +25,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnCheckout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openCheckout();
-            }
-        });
     }
     private void openMenu() {
         Intent intent = new Intent(this, DaftarMenuActivity.class);
         startActivity(intent);
     }
 
-    private void openCheckout() {
-        Intent intent = new Intent(this, CheckoutActivity.class);
-        startActivity(intent);
-    }
 }

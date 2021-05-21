@@ -8,34 +8,46 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MAKAN KUY"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="100dp"
-        android:textSize="40sp"/>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:src="@drawable/luckycat"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-        <Button
-            android:id="@+id/btnLihatMenu"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Lihat Menu"
-            android:textColorHint="@color/white"
+            android:text="Makuy"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="40sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Makuy is an online food ordering that integrates with
+the restaurants that use our services"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:paddingHorizontal="30dp"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
 
-            android:textSize="18sp"/>
-        <Button
-            android:id="@+id/btnCheckout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Checkout"
-            android:textColorHint="@color/white"
-            android:textSize="18sp"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLihatMenu"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:hint="View Menu"
+        android:textColorHint="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"/>
+
 </LinearLayout>
