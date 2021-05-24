@@ -38,5 +38,11 @@
             android:textColor="#000"
             android:padding="8dp" />
 
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add To Cart"/>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
