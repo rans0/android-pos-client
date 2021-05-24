@@ -37,6 +37,5 @@ public class CartActivity extends AppCompatActivity {
         list = new ArrayList<>();
         adapter = new CartAdapter(this, list);
         daftarCart.setAdapter(adapter);
-
     }
 }

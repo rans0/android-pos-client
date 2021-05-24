@@ -53,5 +53,4 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MenuViewHolder
         }
 
     }
-
 }
