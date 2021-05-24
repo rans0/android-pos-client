@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Posclien">
         <activity android:name=".FinishPayment"></activity>
+        <activity android:name=".OrderedActivity"></activity>
+        <activity android:name=".CartActivity" />
         <activity android:name=".CheckoutIntent" />
         <activity android:name=".DaftarMenuActivity" />
         <activity android:name=".CheckoutActivity" />
