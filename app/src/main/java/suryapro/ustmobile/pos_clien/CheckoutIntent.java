@@ -37,39 +37,10 @@ public class CheckoutIntent extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null){
-            if (result.getContents() == null){
-                Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
-
-            }else{
-                // jika qrcode berisi data
-                try{
-                    // converting the data json
-                    JSONObject object = new JSONObject(result.getContents());
-                    // atur nilai ke textviews
-                    textViewNama.setText(object.getString("nama"));
-                    Intent intent = new Intent(this, CheckoutIntent.class);
-                    startActivity(intent);
-
-                }catch (JSONException e){
-                    e.printStackTrace();
-                    // jika format encoded tidak sesuai maka hasil
-                    // ditampilkan ke toast
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-
-
-
-                }
-            }
-        }else{
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
 
     private void bayar() {
+        Intent intent = new Intent(this, FinishPayment.class);
+        startActivity(intent);
         Toast.makeText(this, "Berhasil Bayar", Toast.LENGTH_SHORT).show();
     }
 
