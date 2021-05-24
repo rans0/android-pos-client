@@ -1,8 +1,10 @@
 package suryapro.ustmobile.pos_clien;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,6 +33,13 @@ public class DaftarMenuAdapter extends RecyclerView.Adapter<DaftarMenuAdapter.Me
         holder.namaMakanan.setText(mList.get(position).getNama());
         holder.deskripsiMakanan.setText(mList.get(position).getDeskripsi());
         holder.hargaMakanan.setText(mList.get(position).getHarga());
+        holder.addCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity, CartActivity.class);
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -40,12 +49,14 @@ public class DaftarMenuAdapter extends RecyclerView.Adapter<DaftarMenuAdapter.Me
 
     public static class MenuViewHolder extends RecyclerView.ViewHolder {
         TextView namaMakanan, deskripsiMakanan, hargaMakanan;
+        Button addCart;
         public MenuViewHolder(@NonNull View itemMenu) {
             super(itemMenu);
 
             namaMakanan = itemMenu.findViewById(R.id.nama_makanan);
             deskripsiMakanan = itemMenu.findViewById(R.id.deskripsi_makanan);
             hargaMakanan = itemMenu.findViewById(R.id.harga_makanan);
+            addCart = itemMenu.findViewById(R.id.btnAddToCart);
         }
 
     }
