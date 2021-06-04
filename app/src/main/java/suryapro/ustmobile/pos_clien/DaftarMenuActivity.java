@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -27,7 +29,7 @@ public class DaftarMenuActivity extends AppCompatActivity {
     private DaftarMenuAdapter adapter;
     private List<ModelMenu>list;
     private List<ModelPesanan>listPesan;
-    private Button btnCheckout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +39,26 @@ public class DaftarMenuActivity extends AppCompatActivity {
         daftarMenu = findViewById(R.id.daftar_menu);
         daftarMenu.setHasFixedSize(true);
         daftarMenu.setLayoutManager(new LinearLayoutManager(this));
-        btnCheckout = findViewById(R.id.btnCheckout);
-
-        btnCheckout.setOnClickListener(new View.OnClickListener() {
+        BottomNavigationView btmNavView = (BottomNavigationView) findViewById(R.id.navbarBawah);
+        btmNavView.setSelectedItemId(R.id.home);
+        btmNavView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
-            public void onClick(View view) {
-                checkout();
-            };
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.home:
+                    case R.id.cart:
+                        startActivity(new Intent(getApplicationContext(),CartActivity.class));
+                        finish();
+                        overridePendingTransition(0, 0);
+                        return;
+
+                    case R.id.checkout:
+                        startActivity(new Intent(getApplicationContext(),CheckoutTotalPriceActivity.class));
+                        finish();
+                        overridePendingTransition(0, 0);
+                        return;
+                }
+            }
         });
 
         db = FirebaseFirestore.getInstance();
@@ -57,8 +72,12 @@ public class DaftarMenuActivity extends AppCompatActivity {
         order();
     }
 
+    private void menu(){
+        Intent intent = new Intent(this, DaftarMenuActivity.class);
+        startActivity(intent);
+    }
     private void checkout() {
-        Intent intent = new Intent(this, CheckoutActivity.class);
+        Intent intent = new Intent(this, CheckoutTotalPriceActivity.class);
         startActivity(intent);
     }
 

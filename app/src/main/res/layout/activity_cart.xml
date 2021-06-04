@@ -17,12 +17,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="5dp">
         <Button
             android:id="@+id/btnOrder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Order"/>
+            android:text="Order"
+            android:textColor="@color/white"/>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
