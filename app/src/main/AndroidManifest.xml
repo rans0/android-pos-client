@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Posclien">
-        <activity android:name=".FinishPayment"></activity>
-        <activity android:name=".OrderedActivity"></activity>
+        <activity android:name=".CheckoutTotalPriceActivity"></activity>
+        <activity android:name=".FinishPayment" />
+        <activity android:name=".OrderedActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".CheckoutIntent" />
         <activity android:name=".DaftarMenuActivity" />

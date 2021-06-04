@@ -14,9 +14,9 @@ import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MenuViewHolder> {
     private CartActivity cartActivity;
-    private List<ModelMenu> mMenu;
+    private List<ModelPesanan> mMenu;
 
-    public CartAdapter(CartActivity cartActivity, List<ModelMenu> mMenu) {
+    public CartAdapter(CartActivity cartActivity, List<ModelPesanan> mMenu) {
         this.cartActivity = cartActivity;
         this.mMenu = mMenu;
     }
@@ -31,8 +31,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MenuViewHolder
     @Override
     public void onBindViewHolder(@NonNull CartAdapter.MenuViewHolder holder, int position) {
         holder.namaMakanan.setText(mMenu.get(position).getNama());
-        holder.deskripsiMakanan.setText(mMenu.get(position).getDeskripsi());
-        holder.hargaMakanan.setText(mMenu.get(position).getHarga());
     }
 
     @Override

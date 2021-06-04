@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,19 +20,20 @@ import org.json.JSONObject;
 public class CheckoutActivity extends AppCompatActivity implements View.OnClickListener {
 //    private Button buttonScan, buttonBayar;
     private TextView textViewNama;
-    private ImageButton imgBtn;
     private IntentIntegrator intentIntegrator;
+    private LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
-        imgBtn = (ImageButton) findViewById(R.id.imgBtn);
-
         textViewNama = (TextView) findViewById(R.id.textViewNama);
 
-        imgBtn.setOnClickListener(this);
+
+        linearLayout = findViewById(R.id.clickableLayout);
+        linearLayout.setClickable(true);
+        linearLayout.setOnClickListener(this);
 
 
     }

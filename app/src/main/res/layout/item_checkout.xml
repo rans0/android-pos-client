@@ -1,11 +1,10 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
-    android:layout_marginVertical="1dp">
-
+    android:layout_margin="13dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +19,7 @@
             android:textSize="18sp"
             android:textColor="@color/purple_200"
             android:textStyle="bold"
-            android:padding="5dp" />
+            android:padding="8dp" />
 
         <TextView
             android:id="@+id/deskripsi_makanan"
@@ -29,7 +28,7 @@
             android:text="Deskripsi"
             android:textSize="12sp"
             android:textColor="#000"
-            android:padding="5dp" />
+            android:padding="8dp" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,12 +50,6 @@
                 android:textColor="#000"
                 android:padding="1dp" />
         </LinearLayout>
-        <Button
-            android:id="@+id/btnAddToCart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Add To Cart"/>
-
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

@@ -1,9 +1,11 @@
 package suryapro.ustmobile.pos_clien;
 
+import androidx.room.Entity;
+
+@Entity(tableName = "tblCart")
 public class ModelPesanan {
     String id, nama, total, status_pembayaran;
 
-    public ModelPesanan(){}
 
     public ModelPesanan(String id, String nama, String total, String status_pembayaran) {
         this.id = id;

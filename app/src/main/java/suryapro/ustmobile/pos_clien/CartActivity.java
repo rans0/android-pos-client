@@ -35,7 +35,7 @@ public class CartActivity extends AppCompatActivity {
         daftarCart.setLayoutManager(new LinearLayoutManager(this));
         daftarCart.setHasFixedSize(true);
         list = new ArrayList<>();
-        adapter = new CartAdapter(this, list);
+        adapter = new CartAdapter(this, listPesan);
         daftarCart.setAdapter(adapter);
     }
 }
